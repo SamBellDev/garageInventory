@@ -1,0 +1,31 @@
+{
+  "name": "garageinventory",
+  "version": "1.0.0",
+  "description": "App to manage my inventory of tools",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamBellDev/garageInventory.git"
+  },
+  "author": "Sam Bell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SamBellDev/garageInventory/issues"
+  },
+  "homepage": "https://github.com/SamBellDev/garageInventory#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.10.3",
+    "nodemon": "^2.0.13",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  }
+}
