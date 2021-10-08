@@ -1,0 +1,12 @@
+<h1>Tools</h1>
+
+{{#each tools}}
+    <div>
+        <h2>{{toolName}}</h2>
+        <p>Powered by: {{powerSource}}</p>
+        {{#if isLent}}
+            <p>Lent to: {{lentTo}}</p>
+        {{/if}}
+        <button class="deleteToolButton" data-id="{{_id}}">Delete {{toolName}}</button>
+    </div>
+{{/each}}

@@ -1,9 +1,15 @@
-import express, {Application, Request, Response, NextFunction} from 'express';
+import express, {Application, Request, Response} from 'express';
+import expressHandlebars from 'express-handlebars';
+const router = require('./router');
 
 const app: Application = express()
+const port: number = 5000
 
-app.get('/', (req: Request, res: Response)=> {
-    res.send('Hello');
-});
+app.use(express.json())
+app.use(express.static('public'))
+app.engine('handlebars', expressHandlebars())
+app.set('view engine', 'handlebars')
 
-app.listen(5000, () => console.log('Server running'));
+router(app)
+
+app.listen(port, () => console.log('Server running'));
