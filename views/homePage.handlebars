@@ -1,13 +1,16 @@
 <h1>Tools</h1>
 
 {{#each tools}}
+
     <div>
         <h2>{{toolName}}</h2>
         <p>Powered by: {{powerSource}}</p>
         <p>Quantity: {{quantity}}</p>
-        {{#if isLent}}
-            <p>Lent to: {{lentTo}}</p>
-        {{/if}}
         <button class="deleteToolButton" data-id="{{_id}}">Remove {{toolName}}</button>
+    {{#if isLent}}
+        <p>Lent to: {{lentTo}}</p>
+    {{else}}
+        <button class="lendToButton" data-id="{{_id}}>">Lend {{toolName}}</button>
+    {{/if}}
     </div>
 {{/each}}
