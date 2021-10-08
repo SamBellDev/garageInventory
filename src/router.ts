@@ -13,7 +13,7 @@ function router(app: Application) {
                 const db: Db = client.db('garageApp')
                 const toolsCollection: Collection = db.collection('tools')
                 const tools = await toolsCollection.find({}).toArray()
-                res.render('homePage', tools)
+                res.render('homePage', {tools})
             } else {
                 res.sendStatus(500)
             }
